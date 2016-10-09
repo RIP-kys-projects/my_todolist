@@ -1,0 +1,28 @@
+{
+  "name": "my_todolist",
+  "version": "1.0.0",
+  "description": "Курсовой проект learn.javascript.ru",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "jshint components/",
+    "fest": "fest-build --dir=components",
+    "dev": "static . -p 8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karalkou/my_todolist.git"
+  },
+  "keywords": [
+    "learn"
+  ],
+  "author": "Yury Karalkou <karalkou@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karalkou/my_todolist/issues"
+  },
+  "devDependencies": {
+    "fest": "^0.12.1",
+    "node-static": "0.7.9"
+  }
+}

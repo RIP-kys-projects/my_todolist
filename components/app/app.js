@@ -14,24 +14,12 @@
 
 		},
 		data: {
-			title: 'SINGLE PAGE APPLICATION',
+			title: 'SIMPLE TO DO LIST',
 			items: [
-				{
-					href: 'https://vk.com',
-					anchor: 'vk.com'
-				},
-				{
-					href: 'https://ok.ru',
-					anchor: 'ok.ru'
-				},
-				{
-					href: 'https://yahoo.com',
-					anchor: 'yahoo.com'
-				},
-				{
-					href: 'https://yandex.ru',
-					anchor: 'yandex.ru'
-				}
+				{ task: 'Польский язык. Учебник (1ч)' },
+				{ task: 'Приготовить еду на 3 дня' },
+				{ task: 'Читать про модули CommonJS' },
+				{ task: 'Польский язык. Memrise (1ч)' }
 			]
 		}
 	});

@@ -25,6 +25,7 @@
 
 		/**
 		 * Создаем HTML
+		 * с использование шаблонизатора festa
 		 */
 		render () {
 			this.el.innerHTML = _template(this.data);
@@ -76,7 +77,7 @@
 
 
 		/**
-		* Отправка данных формы
+		* Отправка данных формы (испускание кастомного события, на которое можно подписаться извне)
 		* @param {Event} event
 		* @private
 		*/
@@ -84,8 +85,7 @@
 			event.preventDefault();
 
 			this.trigger('add', {
-				href: this.getField('href').value,
-				anchor: this.getField('anchor').value
+				task: this.getField('task').value
 			});
 
 			event.target.reset();

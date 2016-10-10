@@ -4,6 +4,7 @@
 	//import
 	let _template = window.fest['menu/menu.tmpl'];
 
+
 	/**
 	 * @class Menu
 	 * Компонента "Меню"
@@ -35,6 +36,7 @@
 
 		/**
 		 * Удаляем пункт меню из данных
+		 * и делаем ререндер, чтобы данные были консистентны (и внешне и внутренне все одинаково)
 		 * @param  {Object} removedItem
 		 */
 		removeItem (removedItem) {
@@ -97,6 +99,7 @@
 		}
 
 	}
+
 
 	// Export
 	window.Menu = Menu;

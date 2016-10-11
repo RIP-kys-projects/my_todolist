@@ -8,12 +8,6 @@
 
 	let menu = new Menu({
 		el: document.querySelector('.js-menu'),
-		onPick (item) {
-			console.log(item);
-		},
-		onRemove () {
-
-		},
 		data: {
 			title: 'SIMPLE TO DO LIST',
 			items: itemsData

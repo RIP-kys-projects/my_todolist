@@ -12,13 +12,13 @@
 	class Menu {
 
 		/**
-		 * @constructor
-		 * @param  {Object} opts
+		 * constructor of Menu class
+		 * @param el - element to maintain and render
+		 * @param data - data to create (render) menu
 		 */
-		constructor ({el, data, onPick}) { // деструктуризация объекта
+		constructor ({el, data}) { // деструктуризация объекта
 			this.el = el;
 			this.data = data;
-			this.onPick = onPick;
 
 			this.render();
 
@@ -40,7 +40,7 @@
 		 * @param  {Object} removedItem
 		 */
 		removeItem (removedItem) {
-			this.data.items = this.data.items.filter((item, index) => {
+			this.data.items = this.data.items.filter( (item, index, arr) => {
 				return index !== removedItem.index;
 			});
 			this.render();
@@ -82,7 +82,7 @@
 		}
 
 		/**
-		* Клик в любую область меню
+		* Клик в любую область меню (функцию-обработчик "собираем" из дата-атрибута)
 		* @param {Event} event
 		* @private
 		*/

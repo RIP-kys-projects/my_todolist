@@ -18,8 +18,10 @@
 		el: document.querySelector('.js-form')
 	});
 
-	form.on('add', event => {
-		menu.addItem(event.detail);
-	});
+	/* при получении события добавления от формы, инициируем обработчик добавления элемента в меню */
+	form.on('add', (event) => {
+			menu.addItem(event.detail);
+		}
+	);
 
 })();

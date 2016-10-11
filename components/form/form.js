@@ -12,8 +12,9 @@
 	class Form {
 
 		/**
-		 * @constructor
-		 * @param  {Object} opts
+		 * constructor of class Form
+		 * @param el - element to maintain and render
+		 * @param data - some additional data
 		 */
 		constructor({el, data}) {
 			this.el = el;
@@ -62,8 +63,8 @@
 
 		/**
 		 * Создаем и диспатчим событие
-		 * @param  {[type]} data [description]
-		 * @return {[type]}      [description]
+		 * @param  {[String]} name [имя события]
+		 * @param  {[Object]} data [дополнительные детали]
 		 */
 		trigger (name, data) {
 			let widgetEvent = new CustomEvent(name, {
@@ -88,6 +89,8 @@
 				task: this.getField('task').value
 			});
 
+			/*	The HTMLFormElement.reset() method restores a form element's default values.
+				This method does the same thing as clicking the form's reset button. */
 			event.target.reset();
 		}
 

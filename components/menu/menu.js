@@ -25,6 +25,10 @@
 			this._initEvents();
 		}
 
+		setData(data){
+			this.data = data;
+		}
+
 		/**
 		 * Добавляем элемент меню
 		 * @param {Object} item
@@ -99,7 +103,6 @@
 		}
 
 	}
-
 
 	// Export
 	window.Menu = Menu;

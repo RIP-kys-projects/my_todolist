@@ -28,7 +28,7 @@
 		}
 
 		/**
-		 * Проверяет, являются ли данные непустым объектом
+		 * Статический метод для проверки, являются ли данные непустым объектом
 		 * @param data - данные на проверку
 		 * @returns {boolean}
 		 */
@@ -68,6 +68,11 @@
 				return index !== removedItem.index;
 			});
 			this.render();
+			// TODO обработать ситуацию при удалении, когда есть ещё элементы зачеркнутые, но не удаленные
+		}
+
+		toggleLineThroughClass (item){
+
 		}
 
 		/**
@@ -88,6 +93,15 @@
 			this.removeItem({
 				index
 			});
+		}
+
+		/**
+		 * Переключение модификатора перечеркнутости
+		 * @param item
+		 * @private
+		 */
+		_onlinethrough(item){
+			item.parentNode.querySelector('[data-action="pick"]').classList.toggle('linethrough');
 		}
 
 		/**

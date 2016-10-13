@@ -14,17 +14,37 @@
 		/**
 		 * constructor of Menu class
 		 * @param el - element to maintain and render
-		 * @param data - data to create (render) menu
+		 * @param {Object} data - data to create (render) menu
 		 */
 		constructor ({el, data}) { // деструктуризация объекта
 			this.el = el;
 			this.data = data;
 
-			this.render();
+			if(Menu.isDataSet(this.data)){
+				this.render();
+			}
 
 			this._initEvents();
 		}
 
+		/**
+		 * Проверяет, являются ли данные непустым объектом
+		 * @param data - данные на проверку
+		 * @returns {boolean}
+		 */
+		static isDataSet(data){
+			if ( data
+				 &&
+				 data.toString().slice(8, -1) === 'Object' && Object.keys(data).length > 0 ){
+					return false;
+			}
+			return false;
+		}
+
+		/**
+		 * Устанавливает данные в переменную(св-во)
+		 * @param data
+		 */
 		setData(data){
 			this.data = data;
 		}

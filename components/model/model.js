@@ -4,10 +4,9 @@
     class Model {
         constructor({ resource, data = {} }){
             this.resourse = resource;
-
             this._handlers = [];
-            this.setData(data);
 
+            //this.setData(data);
         }
 
         setData(data){
